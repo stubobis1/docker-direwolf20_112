@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+    mc:
+        container_name: direwolf20
+        volumes:
+            - 'minecraft_direwolf20_world:/minecraft/world'
+            - 'minecraft_direwolf20_backups:/minecraft/backups'
+        ports:
+            - '25565:25565'
+        environment:
+            - EULA=TRUE
+        image: 'direwolf20:2.5.0'
+        
+volumes:
+    minecraft_direwolf20_world:
+    minecraft_direwolf20_backups:
